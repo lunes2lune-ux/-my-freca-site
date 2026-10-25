@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fffafd">
+  <title>MY FRECA COLLECTION</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">MY LITTLE COLLECTION</p>
+    <h1>Freca Collection</h1>
+    <p class="subtitle">わたしのフレカコレクション</p>
+    <div class="sparkles" aria-hidden="true">✦ ୨୧ ✧ ♡ ✧ ୨୧ ✦</div>
+  </header>
+
+  <main class="container">
+    <section class="controls" aria-label="フレカ検索">
+      <label class="search-label" for="search">コーデ名・カード名で検索</label>
+      <input id="search" type="search" placeholder="例：ミント、プリンセス…" autocomplete="off">
+    </section>
+
+    <nav id="character-tabs" class="character-tabs" aria-label="マイキャラ選択"></nav>
+
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">CARD ALBUM</p>
+        <h2 id="current-character">マイキャラ 1</h2>
+      </div>
+      <span id="result-count" class="result-count">0 cards</span>
+    </div>
+
+    <section id="card-grid" class="card-grid" aria-live="polite"></section>
+    <p id="empty-state" class="empty-state" hidden>まだフレカが登録されていないよ ♡<br>画像を追加すると、ここに表示されるよ。</p>
+  </main>
+
+  <footer>
+    <p>Made with ♡ for my freca collection</p>
+  </footer>
+
+  <dialog id="card-dialog" class="card-dialog">
+    <button id="close-dialog" class="close-button" aria-label="閉じる">×</button>
+    <p id="modal-character" class="modal-kicker"></p>
+    <h2 id="modal-title"></h2>
+    <div class="modal-images">
+      <figure>
+        <img id="modal-card-image" alt="フレカ画像">
+        <figcaption>FRECA</figcaption>
+      </figure>
+      <figure id="qr-figure">
+        <img id="modal-qr-image" alt="QRコード画像">
+        <figcaption>QR CODE</figcaption>
+      </figure>
+    </div>
+    <p id="modal-note" class="modal-note"></p>
+  </dialog>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
